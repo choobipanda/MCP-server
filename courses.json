@@ -1,0 +1,191 @@
+[
+  {
+    "id": "STA2260",
+    "name": "Probability and Statistics for Computer Scientists and Engineers",
+    "credits": 3,
+    "instructor": "Prof. Jay Windley",
+    "email": "jcwindley@cpp.edu",
+    "schedule": "Tue/Thu 5:30PM-6:45PM",
+    "room": "9-277",
+    "office_hours": "Mon/Tue/Wed/Thu 4:30PM-5:15PM, Building 8-20",
+    "topics": [
+      "descriptive statistics",
+      "probability",
+      "discrete distributions",
+      "continuous distributions",
+      "sampling distributions",
+      "hypothesis testing",
+      "confidence intervals",
+      "chi-squared tests",
+      "ANOVA",
+      "regression",
+      "correlation"
+    ],
+    "prerequisites": ["MAT1150 or MAT1310 with C or better"],
+    "grading": {
+      "midterm": "30%",
+      "final": "30%",
+      "quizzes": "20%",
+      "homework": "20%"
+    },
+    "important_dates": {
+      "midterm": "Tuesday March 10, 2026",
+      "final": "Tuesday May 12, 2026 5:00PM-6:50PM"
+    },
+    "textbook": "Devore - Probability and Statistics for Engineering and the Sciences, 9th Ed.",
+    "description": "Calculus-based introductory statistics covering probability, distributions, inference, hypothesis testing, and regression."
+  },
+  {
+    "id": "CS2250",
+    "name": "Introduction to Web Science and Technology",
+    "credits": 3,
+    "instructor": "Dr. J (Dr. Johannsen)",
+    "email": "dljohannsen@cpp.edu",
+    "schedule": "In-person (see Canvas)",
+    "room": "See Canvas",
+    "office_hours": "Tue/Thu 10:00-11:00AM via Zoom (ID: 372-218-917, passcode: Stretch)",
+    "topics": [
+      "internet fundamentals",
+      "HTML markup",
+      "CSS stylesheets",
+      "client-side scripting",
+      "JavaScript",
+      "server-side scripting",
+      "web frameworks",
+      "web security",
+      "web search engines",
+      "accessibility",
+      "usability"
+    ],
+    "prerequisites": ["CS1400 or CS1260 or CS1280 with C or better"],
+    "grading": {
+      "homework": "40%",
+      "quizzes": "30%",
+      "final": "30%"
+    },
+    "important_dates": {
+      "quiz_1": "Fri Feb 6, 2026",
+      "hw1": "Thu Feb 12, 2026",
+      "hw2": "Thu Feb 26, 2026",
+      "quiz_2": "Fri Feb 27, 2026",
+      "quiz_3": "Thu Feb 26, 2026",
+      "quiz_4": "Fri Mar 20, 2026",
+      "hw3": "Thu Apr 9, 2026",
+      "quiz_5": "Thu Apr 9, 2026"
+    },
+    "textbook": "Fundamentals of Web Development, 2nd Ed. - Connolly & Hoar",
+    "description": "Covers fundamentals of the web including HTML, CSS, JavaScript, server-side scripting, and web app development."
+  },
+  {
+    "id": "CS4680",
+    "name": "Prompt Engineering",
+    "credits": 3,
+    "instructor": "Prof. Abdelfattah Amamra",
+    "email": "aamamra@cpp.edu",
+    "schedule": "Tue 1:00PM-2:15PM in-person, Thu online asynchronous",
+    "room": "8-348",
+    "office_hours": "Tue 2:30PM-4:00PM, Wed 9:30-11:30AM or Zoom by appointment",
+    "topics": [
+      "LLM training",
+      "prompt engineering",
+      "prompt patterns",
+      "RAG",
+      "agents",
+      "MCP",
+      "APIs",
+      "AI coding",
+      "vibe coding",
+      "fine-tuning",
+      "transformers"
+    ],
+    "prerequisites": ["CS2400 or equivalent, Python or Java proficiency"],
+    "grading": {
+      "assignments": "50%",
+      "quizzes_classwork": "20%",
+      "final_project": "30%"
+    },
+    "important_dates": {
+      "quiz_1": "Fri Jan 30, 2026",
+      "quiz_2": "Fri Feb 6, 2026",
+      "project_topic": "Thu Feb 19, 2026",
+      "mini_chatbot": "Mon Mar 2, 2026",
+      "conversational_llm": "Tue Mar 10, 2026",
+      "rag_qa_service": "Mon Mar 16, 2026",
+      "llm_agent": "Mon Mar 23, 2026",
+      "mcp_hands_on": "Sun Mar 29, 2026"
+    },
+    "textbook": "No textbook required",
+    "description": "Covers LLM training, prompt engineering patterns, and practical applications including RAG, agents, and MCP."
+  },
+  {
+    "id": "CS3010",
+    "name": "Numerical Methods",
+    "credits": 3,
+    "instructor": "Lecturer Edwin Rodriguez",
+    "email": "earodriguez@cpp.edu",
+    "schedule": "Mon/Wed/Fri 11:00AM-11:50AM",
+    "room": "Building 8, Room 302",
+    "office_hours": "Tue/Thu 1:00PM-3:00PM via Zoom, by appointment",
+    "topics": [
+      "error analysis",
+      "root finding",
+      "zeroes of functions",
+      "linear equations",
+      "interpolation",
+      "least squares approximation",
+      "numerical integration",
+      "numerical differentiation",
+      "random processes"
+    ],
+    "prerequisites": ["Calculus", "Linear Algebra", "Programming proficiency"],
+    "grading": {
+      "attendance": "10%",
+      "assignments": "35%",
+      "midterm": "25%",
+      "final": "30%"
+    },
+    "important_dates": {
+      "midterm": "Friday March 13, 2026",
+      "final": "Finals Week May 11-15, 2026"
+    },
+    "textbook": "Numerical Mathematics and Computing, 7th Ed. - Cheney & Kincaid",
+    "description": "Introduction to numerical methods and their implementation as computer programs, covering root finding, interpolation, integration, and more."
+  },
+  {
+    "id": "CS4080",
+    "name": "Programming Languages",
+    "credits": 3,
+    "instructor": "Lecturer Edwin Rodriguez",
+    "email": "earodriguez@cpp.edu",
+    "schedule": "Mon/Wed/Fri 9:00AM-9:50AM",
+    "room": "8-345",
+    "office_hours": "Tue/Thu 1:00PM-3:00PM via Zoom, by appointment",
+    "topics": [
+      "syntax and semantics",
+      "binding and scoping",
+      "data types",
+      "abstraction",
+      "control flow",
+      "procedural abstraction",
+      "runtime processing",
+      "programming paradigms",
+      "exception handling",
+      "concurrency",
+      "garbage collection"
+    ],
+    "prerequisites": ["Upper division CS standing"],
+    "grading": {
+      "attendance": "10%",
+      "assignments": "15%",
+      "semester_project": "35%",
+      "midterm": "20%",
+      "final": "20%"
+    },
+    "important_dates": {
+      "midterm": "Friday March 13, 2026",
+      "final": "Finals Week May 11-15, 2026"
+    },
+    "textbook": "Programming Languages, 11th Ed. - Robert W. Sebesta",
+    "description": "Introductory course on the design and implementation of programming languages covering syntax, semantics, types, control flow, and paradigms."
+  }
+]
