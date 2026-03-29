@@ -118,7 +118,7 @@ def search_course_tool(query: str) -> str:
     """
     tool name: search_course_tool
     purpose: Search for courses by keyword across course ID, name, description, and topics.
-    expected input: query (string) - keyword to search for, e.g. 'RAG' or 'probability'
+    expected input: query (string) - keyword to search for (for example, 'RAG' or 'probability')
     expected output: JSON with a list of matching courses showing id, name, instructor, credits, schedule, and description. Returns an error if query is empty or a no-results message if nothing matches.
     example call: search_course_tool(query="RAG")
     """
@@ -130,7 +130,7 @@ def get_course_details_tool(course_id: str) -> str:
     """
     tool name: get_course_details_tool
     purpose: Retrieve the full course record for a specific course by its ID.
-    expected input: course_id (string) - the course ID, e.g. 'CS4680' or 'STA2260'
+    expected input: course_id (string) - the course ID, (for example, 'CS4680' or 'STA2260')
     expected output: JSON with the complete course record including topics, grading breakdown, office hours, important dates, and textbook. Returns an error if the course is not found.
     example call: get_course_details_tool(course_id="CS4680")
     """
@@ -142,7 +142,7 @@ def list_courses_by_topic_tool(topic: str) -> str:
     """
     tool name: list_courses_by_topic_tool
     purpose: Find all courses that cover a given topic to help students discover relevant courses.
-    expected input: topic (string) - topic to search for, e.g. 'regression', 'MCP', or 'interpolation'
+    expected input: topic (string) - topic to search for, (for example, 'regression', 'MCP', or 'interpolation')
     expected output: JSON with a list of matching courses showing id, name, full topic list, and prerequisites. Returns an error if topic is empty or a no-results message if nothing matches.
     example call: list_courses_by_topic_tool(topic="probability")
     """
@@ -154,7 +154,7 @@ def check_prerequisites_tool(course_id: str) -> str:
     """
     tool name: check_prerequisites_tool
     purpose: Show what prerequisites a student must complete before enrolling in a course.
-    expected input: course_id (string) - the course ID to check, e.g. 'CS3010'
+    expected input: course_id (string) - the course ID to check (for example, 'CS3010')
     expected output: JSON with course_id, course_name, and list of prerequisites. If no prerequisites are required, a message stating so is included. Returns an error if the course is not found.
     example call: check_prerequisites_tool(course_id="CS4680")
     """
@@ -166,7 +166,7 @@ def suggest_next_courses_tool(completed_courses: list[str]) -> str:
     """
     tool name: suggest_next_courses_tool
     purpose: Given a list of completed course IDs, suggest which courses the student is now eligible to take.
-    expected input: completed_courses (list of strings) - list of completed course IDs, e.g. ['CS2250', 'STA2260']
+    expected input: completed_courses (list of strings) - list of completed course IDs (for example, ['CS2250', 'STA2260'])
     expected output: JSON with a list of suggested courses showing id, name, credits, and description. Returns an error if the list is empty or a no-results message if no courses are unlocked.
     example call: suggest_next_courses_tool(completed_courses=["CS2250", "STA2260"])
     """
