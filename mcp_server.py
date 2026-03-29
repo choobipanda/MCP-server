@@ -3,15 +3,17 @@ from pathlib import Path
 
 from mcp.server.fastmcp import FastMCP
 
+#data
 DATA_FILE = Path(__file__).parent / "courses.json"
 
 def load_courses() -> list[dict]:
+    """Load all courses from the local JSON data file."""
     if not DATA_FILE.exists():
         return []
     with open(DATA_FILE) as f:
         return json.load(f)
 
-#tools
+#tool helpers
 
 def search_course(query: str) -> dict:
     query = query.lower().strip()
@@ -113,34 +115,63 @@ mcp = FastMCP("course-assistant")
 
 @mcp.tool()
 def search_course_tool(query: str) -> str:
-    """Search for courses by keyword. Matches against course ID, name, description, and topics."""
+    """
+    tool name: search_course_tool
+    purpose: Search for courses by keyword across course ID, name, description, and topics.
+    expected input: query (string) - keyword to search for, e.g. 'RAG' or 'probability'
+    expected output: JSON with a list of matching courses showing id, name, instructor, credits, schedule, and description. Returns an error if query is empty or a no-results message if nothing matches.
+    example call: search_course_tool(query="RAG")
+    """
     return json.dumps(search_course(query), indent=2)
 
 
 @mcp.tool()
 def get_course_details_tool(course_id: str) -> str:
-    """Get full details for a specific course by its course ID (e.g. CS4680)."""
+    """
+    tool name: get_course_details_tool
+    purpose: Retrieve the full course record for a specific course by its ID.
+    expected input: course_id (string) - the course ID, e.g. 'CS4680' or 'STA2260'
+    expected output: JSON with the complete course record including topics, grading breakdown, office hours, important dates, and textbook. Returns an error if the course is not found.
+    example call: get_course_details_tool(course_id="CS4680")
+    """
     return json.dumps(get_course_details(course_id), indent=2)
 
 
 @mcp.tool()
 def list_courses_by_topic_tool(topic: str) -> str:
-    """Find all courses that cover a given topic (e.g. RAG, regression, interpolation)."""
+    """
+    tool name: list_courses_by_topic_tool
+    purpose: Find all courses that cover a given topic to help students discover relevant courses.
+    expected input: topic (string) - topic to search for, e.g. 'regression', 'MCP', or 'interpolation'
+    expected output: JSON with a list of matching courses showing id, name, full topic list, and prerequisites. Returns an error if topic is empty or a no-results message if nothing matches.
+    example call: list_courses_by_topic_tool(topic="probability")
+    """
     return json.dumps(list_courses_by_topic(topic), indent=2)
 
 
 @mcp.tool()
 def check_prerequisites_tool(course_id: str) -> str:
-    """Check what prerequisites are required before taking a course."""
+    """
+    tool name: check_prerequisites_tool
+    purpose: Show what prerequisites a student must complete before enrolling in a course.
+    expected input: course_id (string) - the course ID to check, e.g. 'CS3010'
+    expected output: JSON with course_id, course_name, and list of prerequisites. If no prerequisites are required, a message stating so is included. Returns an error if the course is not found.
+    example call: check_prerequisites_tool(course_id="CS4680")
+    """
     return json.dumps(check_prerequisites(course_id), indent=2)
 
 
 @mcp.tool()
 def suggest_next_courses_tool(completed_courses: list[str]) -> str:
-    """Given a list of completed course IDs, suggest which courses you are now eligible to take."""
+    """
+    tool name: suggest_next_courses_tool
+    purpose: Given a list of completed course IDs, suggest which courses the student is now eligible to take.
+    expected input: completed_courses (list of strings) - list of completed course IDs, e.g. ['CS2250', 'STA2260']
+    expected output: JSON with a list of suggested courses showing id, name, credits, and description. Returns an error if the list is empty or a no-results message if no courses are unlocked.
+    example call: suggest_next_courses_tool(completed_courses=["CS2250", "STA2260"])
+    """
     return json.dumps(suggest_next_courses(completed_courses), indent=2)
 
 
-#entry point
 if __name__ == "__main__":
     mcp.run()
