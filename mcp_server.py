@@ -11,7 +11,7 @@ def load_courses() -> list[dict]:
     with open(DATA_FILE) as f:
         return json.load(f)
 
-#helper functions
+#tools
 
 def search_course(query: str) -> dict:
     query = query.lower().strip()
