@@ -141,6 +141,6 @@ def suggest_next_courses_tool(completed_courses: list[str]) -> str:
     return json.dumps(suggest_next_courses(completed_courses), indent=2)
 
 
-#entry Point
+#entry point
 if __name__ == "__main__":
     mcp.run()
